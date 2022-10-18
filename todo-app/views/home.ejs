@@ -1,0 +1,19 @@
+<% layout('layouts/layout.ejs') %> 
+  
+<div class="container jumbotron">
+  <% if (user) { %>
+    <h1 class="mt-3 display-3">Welcome Back <%= user.displayName %>!</h1>
+  <% } %>
+  <h1 class="display-4">Expordo</h1>
+  <p class="lead">Import/Export Tool for Microsoft ToDo</p>
+  <hr class="my-4">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">This tool will help to export data from the task list. Also, it will help us to import all tasks at once.</li>
+    <li class="list-group-item">The task data from Microsoft To Do can be uploaded or downloaded directly with the browser, no other servers are
+      involved.</li>
+    <li class="list-group-item">Microsoft Graph API is used as an endpoint to provide access to the Microsoft cloud, including Microsoft 365
+      products.</li>
+  </ul>
+  <br>
+  <a class="btn btn-dark btn-md" href="https://docs.microsoft.com/graph/overview" role="button">Docs</a>
+</div>

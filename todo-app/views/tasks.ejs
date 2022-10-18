@@ -1,0 +1,26 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+<% layout('layouts/layout.ejs') %> 
+<!-- <LayoutSnippet> -->
+<div class="container">
+    <h1 class="mb-3">Task Lists</h1>
+
+    <!-- <a href="/calendar/new" class="btn btn-light btn-sm mb-3">New event</a> -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Task Lists</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="list-group">
+                <% for (let tasklist of tasklists) { %> 
+                    <tr>
+                        <td><a class="list-group-item list-group-item-action" href="/tasks/<%= tasklist.id %>"><%= tasklist.displayName %></a></td>
+                    </tr> 
+                <% } %> 
+            </div>
+        </tbody>
+    </table>
+    <!-- </LayoutSnippet> -->        
+</div>
